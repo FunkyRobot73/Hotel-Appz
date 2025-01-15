@@ -22,7 +22,7 @@ export class ReservationFormComponent implements OnInit {
     this.reservationForm = this.formBuilder.group({
       checkInDate: ['', Validators.required],
       checkOutDate: ['', Validators.required],
-      guestName: ['', Validators.required],
+      guestName: ['', [Validators.required, Validators.maxLength(25)]],
       guestEmail: ['', [Validators.required, Validators.email]],
       roomNumber: ['', Validators.required]
     })
